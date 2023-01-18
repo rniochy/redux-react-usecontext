@@ -1,0 +1,7 @@
+.quiz-content {
+    height: 50vh;
+    width: 50vw;
+    background-color: blue;
+    color: #ffffff;
+    border: 1px solid red;          
+  }

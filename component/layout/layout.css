@@ -1,0 +1,12 @@
+.layout-content {
+     height: 70vh;
+     width: 50vw;
+     background-color: blue;
+     color: #ffffff;
+     border: 1px solid red;
+     margin-top: 1rem;    
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+          
+}
