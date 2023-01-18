@@ -2,7 +2,7 @@ import React from 'react';
 import './result.css'
 const Result = () => {
     return (
-        <div className='result-content'>
+        <div className='result-content content'>
               
         </div>
     );

@@ -1,8 +1,5 @@
 .header-content {
-    height: 10vh;
-    width: 50vw;
     background-color: yellow;
-    color: #ffffff;
     border: 1px solid black; 
-    margin-bottom: .3rem;         
+          
 }
