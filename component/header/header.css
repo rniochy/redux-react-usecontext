@@ -1,5 +1,9 @@
 .header-content {
-    background-color: yellow;
-    border: 1px solid black; 
-          
+  display: flex;
+  flex-direction: column;   
+  background: unset !important;  
+}
+
+.header-content h2 {
+    
 }
