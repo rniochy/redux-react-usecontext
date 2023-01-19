@@ -1,9 +1,10 @@
 import React from 'react';
-import './quesion.css'
+import './question.css'
 
 const Question = () => {
     return (
         <div className='question-content content'>
+            question
         </div>
     );
 }
