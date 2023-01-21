@@ -1,7 +1,12 @@
 .header-content {
+  height: 20vh;
   display: flex;
-  flex-direction: column;   
-  background: unset !important;  
+  flex-direction: column;
+  color: #000000;
+  border: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-content h2 {
