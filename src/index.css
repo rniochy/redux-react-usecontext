@@ -15,9 +15,8 @@ body {
 }
 
 .content {
-   height: 20vh;
-   width: 50vw;
-   color: #ffffff;
+   width: 100%;
+   color: #000000;
    margin-top: .3rem; 
    border-radius: 5px;
 }

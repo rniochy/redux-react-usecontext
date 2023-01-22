@@ -4,9 +4,9 @@ import Question from '../question';
 
 const Quiz = () => {
     return (
-        <div className='quiz-content content'>
-            <Question/>
-            <Answer/>
+        <div className='quiz-content'>
+          <div> <Question/></div> 
+          <div> <Answer/></div>   
         </div>
     );
 }
