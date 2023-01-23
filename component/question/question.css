@@ -6,15 +6,7 @@
     box-shadow: .5px .5px 6px #666666;
     background-color: #fff;
     color: #333333;
-}
-
-.question {
-     display: flex;
-     place-content: center;
-}
-.question-content  .question div {
-    display: flex;
-    padding: 5px;
+    transition: 500ms ease-in;
 }
 .q{
     height: 3rem;
@@ -28,4 +20,28 @@
     color: #ffffff;
     border-radius: 2px;
     z-index: 3;
+    transition: 500ms ease-in;
 }
+.question span {
+    font-size: 13pt;
+}
+.question {
+     display: flex;
+     place-content: center;
+}
+.question-content  .question div {
+    display: flex;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .q{
+            background-color: #ffffff ;
+            color:  #333333;
+        }
+        .question-text {
+            background-color: #333333;
+            color: #ffffff;
+        }
+   }
