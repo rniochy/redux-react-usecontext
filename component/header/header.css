@@ -2,7 +2,7 @@
   height: 20vh;
   display: flex;
   flex-direction: column;
-  color: #000000;
+  color: #333333;
   border: 1px solid #cccccc;
   display: flex;
   justify-content: center;
@@ -10,5 +10,9 @@
   font-size: 12pt;
 }
 .header-content h2 {
-    
+     font-weight: 400;
+     font-size: x-large;
+}
+.header-content P {
+    font-size: 10pt;
 }
