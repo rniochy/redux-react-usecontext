@@ -1,3 +1,56 @@
-.answer-content {
-    color: red;
+.answer-content  section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    /* background-color: rgb(121, 137, 255); */
 }
+
+.answer-content  .answer div {
+     display: flex;
+     width: 18rem;
+     margin: 0 auto;
+     padding: 5px;
+}
+.a-1,
+.a-2,
+.a-3,
+.a-4{
+     height: 3rem;
+     width: 3rem;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: .5px .5px 6px #666666;
+     background-color: #333333;
+     color: #ffffff;
+     border-radius: 2px;
+     z-index: 3;
+}
+.a-text-1,
+.a-text-2,
+.a-text-3,
+.a-text-4 {
+     width: fit-content;
+     padding: 0.5rem;
+     align-self: center;
+     border-radius: 3px;
+     box-shadow: .5px .5px 6px #666666;
+     background-color: #fff;
+     color: #333333;
+     z-index: 1;
+}
+.a-text-1,
+.a-text-3{
+    border-left: unset;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    box-shadow: 1px 0 6px #666666;
+ }
+.a-text-2,
+.a-text-4 {
+    border-right: unset;
+    border-bottom-right-radius: unset;
+    border-top-right-radius: unset;
+    /* box-shadow: 0 1px 6px #666666; */
+ }
