@@ -1,7 +1,8 @@
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    border-radius: 5rem;
-   font-size: 11pt; 
+   font-size: 11pt;
+   user-select: none;
 }
 
 * {
