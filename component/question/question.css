@@ -6,7 +6,12 @@
     box-shadow: .5px .5px 6px #666666;
     background-color: #fff;
     color: #333333;
-    transition: 500ms ease-in;
+    transition: 300ms ease-in;
+    z-index: 9;
+    font-size: 10pt;
+}
+.question-text:hover {
+        transform: scale(1.2);
 }
 .q{
     height: 3rem;
