@@ -1,9 +1,14 @@
-import React from 'react';
-import './result.css'
+import React, { useContext } from 'react';
+import { DataContext } from '../../store/Globalstatus';
+import actions from '../../store/Actions';
+import './result.css';
+
+
 const Result = () => {
+    const [status,dispatch] = useContext(DataContext);
 
     const handerClick = () =>{
-         
+        return dispatch({type: actions.back_to_start, payload:{current:0}});
     }
     return (
         <div className='result-content content'>

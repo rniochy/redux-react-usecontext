@@ -12,11 +12,12 @@ const Quiz = () => {
 
     const score = {left: status.current+1, remain:  status.questions.length}
     const {question} = Currentquestions;
-    // const [isFinal] = 
+    
+    
     return (
         <div className='quiz-content'>
             <Header score={score}/>
-          { (score.left < score.remain) ? 
+          { (status.isNotFinal) ? 
             <>
                 <div> <Question question={question}/></div> 
                 <div> <Answer/></div>
