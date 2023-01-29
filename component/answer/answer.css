@@ -43,7 +43,6 @@ span:last-child {
 .a-text-2,
 .a-text-3,
 .a-text-4 {
-     width: fit-content;
      padding: 0.5rem;
      align-self: center;
      border-radius: 3px;

@@ -12,49 +12,30 @@ const Answer = () => {
      const {question} = Currentquestions;
 
     const onClickHandler = ()=> {
-        console.log(answers, question)
        dispatch({type:actions.next_question, payload: {current: status.current+1 } })
     }
     return (
         <div className='answer-content content'>
              <section>
-             <div onClick={onClickHandler} className='answer-1 answer'>
-        <div>
-            <span className='a-1'><h4>A1</h4></span>
-            <span className='a-text-1'>Something Question Here</span>
-        </div>
-    </div>
-
-                <div className='answer-2 answer'>
-                    <div>
-                        <span className='a-text-2'>Something Question Here</span>
-                        <span className='a-2'><h4>A2</h4></span>
-                    </div>
-                </div>
-                <div className='answer-3 answer'>
-                    <div>
-                        <span className='a-3'><h4>A3</h4></span>
-                        <span className='a-text-3'>Something Question Here</span>
-                    </div>
-                </div>
-                <div className='answer-4 answer' >
-                    <div>
-                        <span className='a-text-4'>Something Question Here</span>
-                        <span className='a-4'><h4>A4</h4></span>
-                    </div>
-                </div>
+                  {answers.map((answer, index)=>
+                      <QueAnswer_ answers={answer} onClickHandler={onClickHandler} key={index} index={index}/>)
+                  }
              </section>
         </div>
     );
 }
 
-const Question = () => {
-     return <div onClick={onClickHandler} className='answer-1 answer'>
+const QueAnswer_ = ({answers,onClickHandler, index}) => {
+     const index_ = index+1
+     return (
+     <div onClick={onClickHandler} className={`answer-${index_} answer`}>
         <div>
-            <span className='a-1'><h4>A1</h4></span>
-            <span className='a-text-1'>Something Question Here</span>
+            <span className={`a-${index_}`}><h4>A1</h4></span>
+            <span className={`a-text-${index_}`}>{answers}</span>
         </div>
     </div>
+
+    )    
 }
 
 export default Answer;
