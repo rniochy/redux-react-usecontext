@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './answer.css';
+import { DataContext } from '../../store/Globalstatus';
+import actions from '../../store/Actions';
 
 const Answer = () => {
+     const [status,dispatch] = useContext(DataContext);
+
+    const onClickHandler = ()=> {
+       dispatch({type:actions.next_question, payload: {current: status.current+1 } })
+    }
     return (
         <div className='answer-content content'>
              <section>
-                <div className='answer-1 answer'>
+                <div onClick={onClickHandler} className='answer-1 answer'>
                     <div>
                         <span className='a-1'><h4>A1</h4></span>
                         <span className='a-text-1'>Something Question Here</span>
