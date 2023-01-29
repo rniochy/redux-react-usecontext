@@ -2,8 +2,8 @@ import React from 'react';
 import './result.css'
 const Result = () => {
 
-    const handerClick () =>{
-         return {}
+    const handerClick = () =>{
+         
     }
     return (
         <div className='result-content content'>
