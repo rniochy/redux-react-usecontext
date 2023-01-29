@@ -8,7 +8,7 @@ const Question = ({question}) => {
                 <div>
                     <span className='q'><h4>Q</h4></span>
                     <span className='question-text'>{question}</span>
-                    <span className='q'><h4>?</h4></span>
+                    <span className='q'><h4></h4></span>
                 </div>
             </div>
         </div>

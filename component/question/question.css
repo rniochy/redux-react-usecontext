@@ -28,7 +28,8 @@
     transition: 500ms ease-in;
 }
 .question span {
-    font-size: 13pt;
+    font-size: 10pt;
+    font-size:900;
 }
 .question {
      display: flex;

@@ -2,14 +2,13 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
-    /* background-color: rgb(121, 137, 255); */
     place-items: center;
 }
-
-.answer-content  .answer div {
+.answer-content  .answer{
      display: flex;
      padding: 5px;
      cursor: pointer;
+     width: 50%;
 }
 .answer-content  
 .answer div:hover   
@@ -33,6 +32,7 @@ span:last-child {
      display: flex;
      align-items: center;
      justify-content: center;
+     font-size: 4pt;
      box-shadow: .5px .5px 6px #666666;
      background-color: #333333;
      color: #ffffff;
@@ -42,8 +42,15 @@ span:last-child {
 .a-text-1,
 .a-text-2,
 .a-text-3,
+.a-text-4,  p{ 
+     font-size: 8pt;
+     font-weight: 700;
+}
+
+.a-text-1,
+.a-text-2,
+.a-text-3,
 .a-text-4 {
-   
      padding: 0.5rem;
      align-self: center;
      border-radius: 3px;
@@ -52,6 +59,7 @@ span:last-child {
      color: #333333;
      z-index: 1;   
      transition: all 400ms;
+     width: 100%;
 }
 .a-text-1,
 .a-text-3{

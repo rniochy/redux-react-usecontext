@@ -11,30 +11,27 @@ const Answer = () => {
      const answers = [...incorrectAnswers, correctAnswer];
 
     const onClickHandler = ()=> {
-       dispatch({type:actions.next_question, payload: {current: status.current+1 } })
+       dispatch({type:actions.next_question, payload: {current: status.current+1 }});
     }
     return (
         <div className='answer-content content'>
              <section>
                   {answers.map((answer, index)=>
-                      <QueAnswer_ answers={answer} onClickHandler={onClickHandler} key={index} index={index}/>)
+                      <Answer_ answers={answer} onClickHandler={onClickHandler} key={index} index={index}/>)
                   }
              </section>
         </div>
     );
 }
 
-const QueAnswer_ = ({answers,onClickHandler, index}) => {
+const Answer_ = ({answers,onClickHandler, index}) => {
      const index_ = index+1
      return (
      <div onClick={onClickHandler} className={`answer-${index_} answer`}>
-        <div>
             <span className={`a-${index_}`}><h4>{`A${index_}`}</h4></span>
-            <span className={`a-text-${index_}`}>{answers}</span>
-        </div>
+            <span className={`a-text-${index_}`}><p>{answers}</p></span>
     </div>
 
     )    
 }
-
 export default Answer;
