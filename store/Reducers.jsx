@@ -4,8 +4,8 @@ export const reducers  = (state, action)=>{
      console.log(state, action)
         switch(action.type){
         case actions.next_question:{
-                if((state.questions.length > state.current)) {
-                        // state.isNotFinal = false;
+                if((state.current < state.questions.length )) {
+                        state.isNotFinal = false;
                 }
                 
             return  {

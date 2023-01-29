@@ -11,7 +11,7 @@ const Answer = () => {
      const answers = [...incorrectAnswers, correctAnswer];
 
     const onClickHandler = ()=> {
-       dispatch({type:actions.next_question, payload: {current: status.current+1 }});
+        if(status.isNotFinal) return dispatch({type:actions.next_question, payload: {current: status.current+1 }});
     }
     return (
         <div className='answer-content content'>

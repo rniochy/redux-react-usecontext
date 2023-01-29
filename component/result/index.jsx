@@ -8,7 +8,7 @@ const Result = () => {
     const [status,dispatch] = useContext(DataContext);
 
     const handerClick = () =>{
-        return dispatch({type: actions.back_to_start, payload:{current:0}});
+        return dispatch({type: actions.back_to_start, payload:{current:0, isNotFinal:false}});
     }
     return (
         <div className='result-content content'>
