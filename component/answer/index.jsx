@@ -9,7 +9,6 @@ const Answer = () => {
      const Currentquestions= status.questions[status.current];
      const {correctAnswer, incorrectAnswers} = Currentquestions;
      const answers = [...incorrectAnswers, correctAnswer];
-     const {question} = Currentquestions;
 
     const onClickHandler = ()=> {
        dispatch({type:actions.next_question, payload: {current: status.current+1 } })
@@ -30,7 +29,7 @@ const QueAnswer_ = ({answers,onClickHandler, index}) => {
      return (
      <div onClick={onClickHandler} className={`answer-${index_} answer`}>
         <div>
-            <span className={`a-${index_}`}><h4>A1</h4></span>
+            <span className={`a-${index_}`}><h4>{`A${index_}`}</h4></span>
             <span className={`a-text-${index_}`}>{answers}</span>
         </div>
     </div>
