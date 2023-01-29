@@ -16,7 +16,7 @@ const Quiz = () => {
     return (
         <div className='quiz-content'>
             <Header score={score}/>
-          { true ? 
+          { (score.left < score.remain) ? 
             <>
                 <div> <Question question={question}/></div> 
                 <div> <Answer/></div>
