@@ -10,8 +10,13 @@ const Answer = () => {
      const {correctAnswer, incorrectAnswers} = Currentquestions;
      const answers = [...incorrectAnswers, correctAnswer];
 
-    const onClickHandler = ()=> {
-        if(status.isNotFinal) return dispatch({type:actions.next_question, payload: {current: status.current+1 }});
+    const onClickHandler = ()=> { 
+         if(status.current+1 < status.questions.length){
+             return dispatch({type:actions.next_question, payload: {current: status.current+1,isNotFinal: true }});
+            }   else {
+                return dispatch({type:actions.next_question, payload: {current: status.current, isNotFinal:false }});     
+         }
+           
     }
     return (
         <div className='answer-content content'>

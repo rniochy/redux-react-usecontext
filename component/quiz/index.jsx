@@ -17,7 +17,8 @@ const Quiz = () => {
     return (
         <div className='quiz-content'>
             <Header score={score}/>
-          { (status.isNotFinal) ? 
+          { 
+            (status.isNotFinal) ? 
             <>
                 <div> <Question question={question}/></div> 
                 <div> <Answer/></div>
