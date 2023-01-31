@@ -7,14 +7,15 @@ import './result.css';
 const Result = () => {
     const [status,dispatch] = useContext(DataContext);
 
-    const handerClick = () =>{
-        return dispatch({type: actions.back_to_start});
-    }
+    const onClickHandler = ()=> { 
+        if(status.current+1 > status.questions.length-1)
+            return dispatch({type:actions.back_to_start, payload: {current: status.current+1,isNotFinal: true }});    
+   }
     return (
         <div className='result-content content'>
                <h1>RESULT ....</h1>
 
-               <span onClick={handerClick}>Reset</span>
+               <span onClick={onClickHandler}>Reset</span>
         </div>
     );
 }

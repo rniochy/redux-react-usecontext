@@ -12,7 +12,6 @@ export const reducers  = (state, action)=>{
                 }
         }
         case actions.next_question: {
-                state.current = 0; state.isNotFinal = true;
                return { 
                    ...state, current: action.payload.current, isNotFinal: action.payload.isNotFinal
                 }
