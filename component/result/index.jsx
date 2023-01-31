@@ -8,8 +8,7 @@ const Result = () => {
     const [status,dispatch] = useContext(DataContext);
 
     const onClickHandler = ()=> { 
-        if(status.current+1 > status.questions.length-1)
-            return dispatch({type:actions.back_to_start, payload: {current: status.current+1,isNotFinal: true }});    
+            return dispatch({type:actions.back_to_start, payload: {current: 0,isNotFinal: true }});    
    }
     return (
         <div className='result-content content'>
