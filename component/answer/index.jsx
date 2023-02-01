@@ -20,7 +20,8 @@ const Answer = () => {
         <div className='answer-content content'>
              <section>
                   {answers.map((answer, index)=>
-                      <Answer_ answers={answer} onClickHandler={onClickHandler} key={index} index={index}/>)
+                      <Answer_ answers={answer} onClickHandler={onClickHandler} key={index} index={index}/>
+                    )
                   }
              </section>
         </div>
