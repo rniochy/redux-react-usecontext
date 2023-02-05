@@ -9,6 +9,7 @@ export const DataContext = createContext();
      const inicialState = {questions, current:0, isNotFinal: true, 
      correctCount:0, wrongCount:0};
      const [status, dispatch] = useReducer(reducers, inicialState);
+     
      return (
         <DataContext.Provider value={[status, dispatch]}>
             {children}

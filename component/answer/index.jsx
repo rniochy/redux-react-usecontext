@@ -10,11 +10,13 @@ const Answer = () => {
      const {correctAnswer, incorrectAnswers} = Currentquestions;
      const answers = [...incorrectAnswers, correctAnswer];
 
-     const onClickHandler = ()=> { 
+     const onClickHandler = (e)=> {
+         
+          const userSelect = e.target.innerText
          if(status.current+1 < status.questions.length)
-             return dispatch({type:actions.next_question, payload: {current: status.current+1,isNotFinal: true }});
+             return dispatch({type:actions.next_question, payload: {current: status.current+1,isNotFinal: true, userSelect }});
         
-            return dispatch({type:actions.next_question, payload: {current: status.current, isNotFinal:false }});             
+            return dispatch({type:actions.next_question, payload: {current: status.current, isNotFinal:false, userSelect }});             
     }
     return (
         <div className='answer-content content'>
