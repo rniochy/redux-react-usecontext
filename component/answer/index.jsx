@@ -8,8 +8,13 @@ const Answer = () => {
      const [status,dispatch] = useContext(DataContext);
      const Currentquestions= status.questions[status.current];
      const {correctAnswer, incorrectAnswers} = Currentquestions;
-     const answers = [...incorrectAnswers, correctAnswer];
+     const answers_ = [...incorrectAnswers, correctAnswer];
 
+     const answers  = answers_.map((answer)=> ({sort: Math.random(), value: answer}))
+                              .sort((a,b)=>a.sort - b.sort)
+                              .map((obj)=>obj.value);
+
+                              
      const onClickHandler = (e)=> {
          
           const userSelect = e.target.innerText
