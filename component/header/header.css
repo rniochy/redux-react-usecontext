@@ -1,7 +1,6 @@
 .header-content {
   height: 20vh;
   display: flex;
-  flex-direction: column;
   color: #333333;
   border: 1px solid #cccccc;
   display: flex;
@@ -9,10 +8,29 @@
   align-items: center;
   font-size: 12pt;
 }
-.header-content h2 {
+.header-content div h2 {
      font-weight: 400;
      font-size: x-large;
 }
-.header-content P {
+.header-content div P {
     font-size: 10pt;
+}
+
+.header-timer-number {
+   margin-left: 3rem;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #cccccc;
+   border-radius: 100px;
+   padding: 10px;
+   height: 75px;
+   width: 70px;
+}
+.header-timer span span:last-child{
+    font-size: 18pt;
+    position: relative;
+}
+.header-timer span span{
+   font-size: 8pt;
+   /* position: absolute; */
 }
