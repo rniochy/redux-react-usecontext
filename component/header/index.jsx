@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './header.css'
 const Header = ({score}) => {
     const {left, remain} = score;
-    const [countDown, setCountDown] = useState()
+    const [countDown, setCountDown] = useState(30)
 
-    let n = 30;
-    const decrementTimer = () => {
-             let timer = setInterval(()=>{
-                if(n >= 0) {
-                    n--;
-                    console.log(n);
-                } else {
-                    return clearInterval(timer)
-                } 
-             },2000);           
-    }
+    useEffect(()=>{
+    })
+    
+    // setInterval(()=>{
+    //  setCountDown(countDown -1)
+    // }, 1000)
 
-
-    decrementTimer();
+    
 
 
     return (
