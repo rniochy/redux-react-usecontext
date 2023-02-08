@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css'
 const Header = ({score}) => {
     const {left, remain} = score;
+    const [countDown, setCountDown] = useState()
+
+    let n = 30;
+    const decrementTimer = () => {
+             let timer = setInterval(()=>{
+                if(n >= 0) {
+                    n--;
+                    console.log(n);
+                } else {
+                    return clearInterval(timer)
+                } 
+             },2000);           
+    }
+
+
+    decrementTimer();
+
+
     return (
      <>
         <div className='header-content content'>
@@ -14,7 +32,7 @@ const Header = ({score}) => {
             <div className='header-timer'>
                 <span className='header-timer-number'>
                     <span>Left time</span>
-                    <span>30</span>
+                    <span>{countDown}</span>
                 
                 </span>
             </div>
