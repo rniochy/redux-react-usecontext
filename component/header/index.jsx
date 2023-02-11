@@ -3,22 +3,23 @@ import { useEffect } from 'react';
 import './header.css'
 const Header = ({score}) => {
     const {left, remain} = score;
-    let [countDown, setCountDown] = useState(30)
+    const [countDown, setCountDown] = useState(30)
 
-    useEffect(()=>{
-    })
+    // useEffect(()=>{
+    //     setCountDown(countDown -1)
+    // }, [countDown])
     
     // setInterval(()=>{
     //  setCountDown(countDown -1)
     // }, 1000)
 
-    const timeDecrement = () => {
-        setInterval(()=>{
-         setCountDown(countDown -1)
-    }, 1000)
+    // const timeDecrement = () => {
+    //     setInterval(()=>{
+    //      setCountDown(countDown -1)
+    // }, 1000)
          
-    }
-    timeDecrement();
+    
+    // timeDecrement();
 
     return (
      <>
