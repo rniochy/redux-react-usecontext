@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './header.css'
 const Header = ({score}) => {
     const {left, remain} = score;
-    const [countDown, setCountDown] = useState(30)
+    let [countDown, setCountDown] = useState(30)
 
     useEffect(()=>{
     })
@@ -12,8 +12,13 @@ const Header = ({score}) => {
     //  setCountDown(countDown -1)
     // }, 1000)
 
-    
-
+    const timeDecrement = () => {
+        setInterval(()=>{
+         setCountDown(countDown -1)
+    }, 1000)
+         
+    }
+    timeDecrement();
 
     return (
      <>
