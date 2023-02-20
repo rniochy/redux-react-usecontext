@@ -8,13 +8,9 @@ export const reducers  = (state, action)=>{
         const subtractToGetCurrent = 1;
         const {correctAnswer,incorrectAnswers } = questions[current_  - subtractToGetCurrent]
 
-//      console.log(correctAnswer,incorrectAnswers, state, action, questions[current + subtractToGetCurrent])
-
         incorrectAnswers.indexOf(userSelect) < 0 ? correctCount++ : wrongCount++;
-        console.log(userSelect);
      
         switch(action.type){
-                // const a =   incorrectAnswers.find((elem)=>elem == "1914") ? correctCount++ : wrongCount+++
                 case actions.next_question:{
                         
             return {
