@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import './header.css'
+import React, {useContext } from 'react';
+import  { DataContext } from '../../store/Globalstatus';
+import Countdown from '../countDown';
+import './header.css';
+
 const Header = ({score}) => {
     const {left, remain} = score;
-    const [countDown, setCountDown] = useState(30)
-
-    // useEffect(()=>{
-    //     setCountDown(countDown -1)
-    // }, [countDown])
-    
-    // setInterval(()=>{
-    //  setCountDown(countDown -1)
-    // }, 1000)
-
-    // const timeDecrement = () => {
-    //     setInterval(()=>{
-    //      setCountDown(countDown -1)
-    // }, 1000)
-         
-    
-    // timeDecrement();
 
     return (
      <>
@@ -33,8 +18,7 @@ const Header = ({score}) => {
             <div className='header-timer'>
                 <span className='header-timer-number'>
                     <span>Left time</span>
-                    <span>{countDown}</span>
-                
+                    <span><Countdown/></span>
                 </span>
             </div>
         </div>
